@@ -16,6 +16,13 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-
+        "numpy",
+        "pandas",
+        "geopandas",
+        "shapely",
+        "scipy",
+        "matplotlib",
+        "seaborn",
+        "geopy"
     ],
 )
