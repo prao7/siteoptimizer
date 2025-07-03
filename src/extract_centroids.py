@@ -32,21 +32,25 @@ def calculate_centroids(shapefiles, output_path):
 
 
 if __name__ == "__main__":
-    # Load shapefiles into GeoDataFrames
-    shapefiles = {"p48": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p48.shp',
-                "p57": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p57.shp',
-                "p60": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p60.shp',
-                "p61": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p61.shp',
-                "p62": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p62.shp',
-                "p63": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p63.shp',
-                "p64": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p64.shp',
-                "p65": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p65.shp',
-                "p66": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p66.shp',
-                "p67": '/Users/pradyrao/VSCode/extract_tx_final/SRP_TVA_data/texas_outputs_shapefiles/p67.shp'
+
+    # Define the region
+    region = "ERCOT"
+
+    # Paths to the shapefiles
+    shapefiles = {"p48": 'output_shapefiles/p48.shp',
+                "p57": 'output_shapefiles/p57.shp',
+                "p60": 'output_shapefiles/p60.shp',
+                "p61": 'output_shapefiles/p61.shp',
+                "p62": 'output_shapefiles/p62.shp',
+                "p63": 'output_shapefiles/p63.shp',
+                "p64": 'output_shapefiles/p64.shp',
+                "p65": 'output_shapefiles/p65.shp',
+                "p66": 'output_shapefiles/p66.shp',
+                "p67": 'output_shapefiles/p67.shp'
                 }
 
     # Export distances to a CSV
-    output_path = "centroids"
+    output_path = f"centroids/{region}_zone_distances.csv"
 
     calculate_centroids(shapefiles, output_path)
     
